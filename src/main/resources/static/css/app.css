@@ -1,0 +1,177 @@
+body {
+	margin: 0 !important;
+    background: #FFFFFF;
+    font-family: calibri, sans-serif, Arial;
+    font-size: 16px;
+}
+
+.box {
+  position: relative;
+  width: 40%;
+  min-height: 300px;
+  max-height: 500px;
+  margin: 40px auto;
+  background-color: whitesmoke;
+  border: 1px solid #A9A9A9;
+  box-shadow: 4px 6px 3px #ccc;
+  padding: 10px 40px 40px 40px;
+  overflow: auto;
+}
+
+.form {
+  width: 100%;
+}
+
+.form h3 {
+  margin-bottom: 40px;
+  font-size: 20px;
+}
+
+.form-input-hidden {
+    display: none;
+}
+
+.form-input{
+  margin: 10px auto;
+  width: 100%;
+  position: relative;
+}
+
+.form-input input{
+  border-radius: 5px;
+  width: 100%;
+  border: 1px solid black;
+  padding: 7px 0px;
+  text-indent: 15px;
+}
+
+.form-input-loading input{
+  background-color: #ffffff;
+  background-image: url('../img/loading.gif');
+  background-size: 25px 25px;
+  background-position:right center;
+  background-repeat: no-repeat;
+}
+
+.form-input select {
+  position: relative;
+  border-radius: 5px;
+  width: 30%;
+  border: 1px solid black;
+  padding: 7px 0px;
+  text-indent: 15px;
+}
+
+.form-input .tooltip-text {
+  visibility: hidden;
+  width: 100%;
+  background-color: red;
+  color: #fff;
+  text-align: center;
+  border-radius: 4px;
+  border: 1px solid black;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 120%
+}
+
+.form-input .tooltip-text::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  border-width: 5px;
+  border-style: solid;
+  border-color: red transparent transparent transparent;
+}
+
+.form-input:hover .tooltip-text {
+  visibility: visible;
+}
+
+.grouped-radio {
+  margin: 10px auto;
+  width: 100%;
+}
+
+.grouped-radio label {
+    display: inline-block;
+    padding: 0px 8px;
+}
+
+.grouped-radio input[type='radio'] {
+    transform: scale(1.7);
+}
+
+.grouped-radio input[type='radio'].right {
+    margin-left: 25px;
+}
+
+.btn{
+  text-transform: uppercase;
+  outline: 0;
+  margin-top: 15px;
+  background: #620cc1;
+  width: 100%;
+  height: 40px;
+  border: 0;
+  padding: 5px;
+  border-radius: 5px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+
+.btn:hover, .btn:active, .btn:focus {
+  background: #ffd500;
+  color: #000000;
+}
+
+.footer {
+	text-align: center;
+	background-color: #620cc1;
+	box-shadow: 1px -2px 5px 1px #ccc;
+    width: 99.8%;
+    height: 50px;
+    position: fixed;
+    bottom: 0px;
+}
+
+.footer-text{
+    color: #fff;
+    padding-top: 5px;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.error {
+    color: red;
+}
+
+/*Responsive*/
+@media screen and (max-width: 1080px) {
+  .footer {
+    position: absolute;
+  }
+
+  .box{
+    width: 30%;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .box {
+		float: none;
+		width: 70%;
+		margin-top: 15px;
+	}
+}
+
+@media screen and (max-width: 320px) {
+  .footer {
+    position: relative;
+  }
+}

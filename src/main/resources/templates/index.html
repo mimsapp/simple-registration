@@ -1,0 +1,76 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Simple Registration App</title>
+        <link rel="stylesheet" type="text/css" href="css/app.css">
+        <script type="text/javascript" src="js/vendor/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="js/app.js"></script>
+    </head>
+    <body onload="addDobOption();">
+        <div class="box">
+            <div class="form">
+                <h3>Registration</h3>
+                <div id="mobileNumberForm" class="form-input">
+                    <input id="mobileNumber" onchange="checkMobileNumber();" type="text" placeholder="Mobile Number">
+                    <span class="tooltip-text">Please input valid indonesian phone number</span>
+                    <p id="mobileNumberError" class="error"></p>
+                </div>
+                <div class="form-input">
+                    <input id="firstName" type="text" placeholder="First Name">
+                    <p id="firstNameError" class="error"></p>
+                </div>
+                <div class="form-input">
+                    <input id="lastName" type="text" placeholder="Last Name">
+                    <p id="lastNameError" class="error"></p>
+                </div>
+                <div class="form-input">
+                    <select id="month">
+                        <option value=0>Month</option>
+                        <option value=1>January</option>
+                        <option value=2>February</option>
+                        <option value=3>March</option>
+                        <option value=4>April</option>
+                        <option value=5>May</option>
+                        <option value=6>June</option>
+                        <option value=7>July</option>
+                        <option value=8>August</option>
+                        <option value=9>September</option>
+                        <option value=10>October</option>
+                        <option value=11>November</option>
+                        <option value=12>December</option>
+                    </select>
+                    <select id="day">
+                        <option value="">Day</option>
+                    </select>
+                    <select id="year">
+                        <option value="">Year</option>
+                    </select>
+                </div>
+                <div class="grouped-radio">
+                    <input type="radio" id="male" name="gender" value="M">
+                    <label for="male">Male</label>
+                    <input type="radio" class="right" id="female" name="gender" value="F">
+                    <label for="female">Female</label>
+                </div>
+                <div id="emailForm" class="form-input">
+                    <input id="email" onchange="checkEmail();" type="text" placeholder="Email">
+                    <span class="tooltip-text">Please input your valid email address</span>
+                    <p id="emailError" class="error"></p>
+                </div>
+
+                <div id="registerSubmit" class="form-input">
+                    <button id="register" class="btn" onclick="register()">Register</button>
+                </div>
+
+                <div id="loginSubmit" class="form-input-hidden">
+                    <button id="login" class="btn" onclick="redirectLogin()">Login</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p class="footer-text">Mimsapp Simple Registration</p>
+        </div>
+    </body>
+</html>

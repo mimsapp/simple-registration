@@ -1,0 +1,35 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Simple Registration App</title>
+    <link rel="stylesheet" type="text/css" href="css/app.css">
+    <script type="text/javascript" src="js/vendor/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="js/login.js"></script>
+</head>
+<body>
+<div id="loader" class="hide"></div>
+<div class="box">
+    <div class="form">
+        <h3>Login</h3>
+        <div class="form-input">
+            <input id="username" type="text" placeholder="Enter your Mobile Number/Email">
+            <span class="tooltip-text">Please input valid phone number or email</span>
+        </div>
+        <div class="form-input">
+            <input id="password" type="text" placeholder="Enter your password">
+        </div>
+        <div>
+            <center>
+                <button id="login" class="btn" onclick="login()">Login</button>
+                <p id="loginError" class="error"></p>
+            </center>
+        </div>
+    </div>
+</div>
+
+<div class="footer">
+    <p class="footer-text">Mimsapp Simple Registration</p>
+</div>
+</body>
+</html>
